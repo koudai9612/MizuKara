@@ -1,0 +1,59 @@
+<div class="row">
+    <div class="col-5 col-sm-3">
+        <p>飲み物</p>
+    </div>
+    <div class="col-7 col-sm-9">
+        <p>{{ item.get_type_display|default_if_none:"未入力" }}</p>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-5 col-sm-3">
+        <p>量(ml)</p>
+    </div>
+    <div class="col-7 col-sm-9">
+        <p>{{  item.amount|default_if_none:"未入力" }}</p>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-5 col-sm-3">
+        <p>日付</p>
+    </div>
+    <div class="col-7 col-sm-9">
+        <p>{{ item.date|date:"Y年m月d日" }}</p>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-5 col-sm-3">
+        <p>作成者</p>
+    </div>
+    <div class="col-7 col-sm-9">
+        <p>{{ item.created_by.get_full_name }}</p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-5 col-sm-3">
+        <p>作成時間</p>
+    </div>
+    <div class="col-7 col-sm-9">
+        <p>{{ item.created_at|date:"Y/m/d G:i:s" }}</p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-5 col-sm-3">
+        <p>更新者</p>
+    </div>
+    <div class="col-7 col-sm-9">
+        <p>{{ item.updated_by.get_full_name }}</p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-5 col-sm-3">
+        <p>更新時間</p>
+    </div>
+    <div class="col-7 col-sm-9">
+        <p>{{ item.updated_at|date:"Y/m/d G:i:s" }}</p>
+    </div>
+</div>
