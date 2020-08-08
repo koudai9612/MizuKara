@@ -28,7 +28,7 @@
             <div class="container">
                 <h1 class="display-4">水を飲みましょう！</h1>
                 <p class="lead">今日は
-                    <p>{{ item.objects.all().aggregate(Sum('amount')) }}</p>ml 飲みました！
+                    <p>{{ Item.objects.all().aggregate(Sum('amount')) }}</p>ml 飲みました！
                 </p>
                 <a class="btn btn-primary" href="{% url 'create' %}"><i class="fas fa-glass-whiskey"></i> 飲んだ！</a>
             </div><!-- /.container -->
