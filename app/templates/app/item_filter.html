@@ -47,10 +47,11 @@
                         </script>
                     ml 飲みました！</p>
                     <div class="progress my-3">
-                        <script type="text/javascript">
-                            document.write(sum);
-                        </script>
-                        <div class="progress-bar" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="width:25%;">25%</div>
+                        <div class="progress-bar" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="width:25%;">
+                            <script type="text/javascript">
+                                document.write(sum);
+                            </script>
+                        </div>
                     </div>
                     <a class="btn btn-primary" href="{% url 'create' %}"><i class="fas fa-glass-whiskey"></i> 飲んだ！</a>
                 </div>
