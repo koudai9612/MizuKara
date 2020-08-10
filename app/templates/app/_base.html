@@ -20,23 +20,25 @@
 
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="">MizuKara</a>
-    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#Navber" aria-controls="Navber"
-            aria-expanded="false"
-            aria-label="ナビゲーションの切替">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse justify-content-end" id="Navber">
-        <ul class="navbar-nav">
-            <li class="nav-item">
-                <a class="nav-link" href="{% url 'admin:index' %}">管理画面</a>
-            </li>
-        </ul>
-        <ul class="navbar-nav">
-            <li class="nav-item">
-                <a class="nav-link" href="{% url 'admin:logout' %}">ログアウト</a>
-            </li>
-        </ul>
+    <div class="container">
+        <a class="navbar-brand" href="">MizuKara</a>
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#Navber" aria-controls="Navber"
+                aria-expanded="false"
+                aria-label="ナビゲーションの切替">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="Navber">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'admin:index' %}">管理画面</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'admin:logout' %}">ログアウト</a>
+                </li>
+            </ul>
+        </div>
     </div>
 </nav>
 {% block content %}
