@@ -54,8 +54,15 @@
         -->
 
         <script type="text/javascript">
-                var i = "{{ item.amount }}";
-                document.write(i);
+            var items = [
+                {% for item in item_list %}
+                    {% with index=forloop.counter0 %}
+                        {% if 0 < index%},{% endif %}
+                    {% endwith %}
+                    "{{ item.amount }}"
+                {% endfor %}
+            ];
+            document.write(items);
         </script>
 
         <div class="row">
