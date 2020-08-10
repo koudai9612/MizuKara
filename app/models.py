@@ -29,12 +29,17 @@ class Item(models.Model):
         verbose_name='量',
         blank=True,
         null=True,
+        validators=[validators.MinValueValidator(1)])
     )
 
     date = models.DateField(
         verbose_name='日付',
         blank=True,
         null=True,
+        validators=[validators.MaxValueValidator(
+            date.today(),
+            message='本日以前の日付を入力してください',
+        )],
     )
 
     # 以下、管理項目
@@ -81,7 +86,7 @@ class Item(models.Model):
         """
         リストボックスや管理画面での表示
         """
-        return self.sample_1
+        return self.type
 
     class Meta:
         """
