@@ -35,10 +35,6 @@ class Item(models.Model):
         verbose_name='日付',
         blank=True,
         null=True,
-        validators=[validators.MaxValueValidator(
-            date.today(),
-            message='本日以前の日付を入力してください',
-        )],
     )
 
     # 以下、管理項目
