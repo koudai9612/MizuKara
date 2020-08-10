@@ -27,7 +27,25 @@
             <div class="jumbotron jumbotron-fluid text-white" style="background: url(https://beiz.jp/images_S/light/light_00034.jpg); background-size: cover;">
                 <div class="container">
                     <h1 class="display-4">水を飲みましょう！</h1>
-                    <p class="lead">今日は ml 飲みました！</p>
+                    <p class="lead">今日は
+                        <script type="text/javascript">
+                            var items = [
+                                {% for item in item_list %}
+                                    {% with index=forloop.counter0 %}
+                                        {% if 0 < index%},{% endif %}
+                                    {% endwith %}
+                                    "{{ item.amount }}"
+                                {% endfor %}
+                            ];
+
+                            var arr = items.toString().split(',');
+                            var sum = 0;
+                            for (var i=0, len=arr.length; i<len; ++i) {
+                                sum += Number(arr[i]);
+                            };
+                            document.write(sum);
+                        </script>
+                    ml 飲みました！</p>
                     <div class="progress my-3">
                         <div class="progress-bar" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="width:25%;">25%</div>
                     </div>
@@ -45,37 +63,6 @@
                 </div>
             </div>
         </div>
-        <!--
-        <div class="row mt-3">
-            <div class="col-10 mx-auto">
-                {% include "./_pagination.html" %}
-            </div>
-        </div>
-        -->
-
-        <script type="text/javascript">
-            var items = [
-                {% for item in item_list %}
-                    {% with index=forloop.counter0 %}
-                        {% if 0 < index%},{% endif %}
-                    {% endwith %}
-                    "{{ item.amount }}"
-                {% endfor %}
-            ];
-            document.write(items);
-            document.write(typeof(items));
-            document.write(items.toString());
-            var arr = items.toString().split(',');
-            document.write(arr);
-            var sum = 0;
-            for (var i=0, len=arr.length; i<len; ++i) {
-                sum += Number(arr[i]);
-            };
-            document.write(sum);
-
-
-        </script>
-
         <div class="row">
             <div class="col-12">
                 <ul class="list-group">
