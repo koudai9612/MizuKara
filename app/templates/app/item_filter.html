@@ -52,9 +52,15 @@
             </div>
         </div>
         -->
-        <script>
-            document.write("Hello world!!");
-        </script>
+        {% for item in item_list %}
+            <script>
+                sum = sum + item.amount;
+
+                document.write(sum);
+            </script>
+
+        {% endfor %}
+
         <div class="row">
             <div class="col-12">
                 <ul class="list-group">
