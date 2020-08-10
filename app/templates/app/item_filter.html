@@ -46,10 +46,15 @@
                             document.write(sum);
                         </script>
                     ml 飲みました！</p>
+                    <script type="text/javascript">
+
+                                $("#pgss").css({'width':sum+'%'});
+
+                    </script>
                     <div class="progress my-3">
-                        <div class="progress-bar" role="progressbar" aria-valuenow=sum aria-valuemin="0" aria-valuemax="2000" style="width:"+sum+"%">
+                        <div class="progress-bar" role="progressbar" aria-valuenow=sum aria-valuemin="0" aria-valuemax="2000" id="pgss">
                             <script type="text/javascript">
-                                document.write(sum);
+                                document.write((sum/2000)*100 + "%");
                             </script>
                         </div>
                     </div>
