@@ -67,8 +67,12 @@
             document.write(items.toString());
             var arr = items.toString().split(',');
             document.write(arr);
+            var sum = 0;
+            for (var i=0, len=arr.length; i<len; ++i) {
+                sum += Number(arr[i]);
+            };
+            document.write(sum);
 
-            
 
         </script>
 
