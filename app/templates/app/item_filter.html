@@ -52,16 +52,18 @@
             </div>
         </div>
         -->
+        <script>
         {% for item in item_list %}
-            <script>
+
                 sum = sum + item.amount;
 
                 document.write(sum);
                 document.write("aaa");
                 <p>{{ item.amount }}</p>
-            </script>
+
 
         {% endfor %}
+        </script>
 
         <div class="row">
             <div class="col-12">
