@@ -29,7 +29,6 @@ class Item(models.Model):
         verbose_name='量',
         blank=True,
         null=True,
-        validators=[validators.MinValueValidator(1)],
     )
 
     date = models.DateField(
