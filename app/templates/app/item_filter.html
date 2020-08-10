@@ -59,7 +59,7 @@
                 document.write(sum);
                 document.write("aaa");
             </script>
-
+            <p>{{ item.amount|default_if_none:"未入力" }}</p>
         {% endfor %}
 
         <div class="row">
