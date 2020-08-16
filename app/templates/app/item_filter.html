@@ -27,7 +27,7 @@
             <div class="jumbotron jumbotron-fluid text-white" style="background: url(https://beiz.jp/images_S/light/light_00034.jpg); background-size: cover;">
                 <div class="container">
                     <h1 class="display-4">水を飲みましょう</h1>
-                    <p class="lead">今日は
+                    <p class="lead">{{ user.get_username }}さんは今日
                         <script type="text/javascript">
                             var items = [
                                 {% for item in item_list %}
@@ -66,7 +66,7 @@
                         //document.getElementById('prog').innerHTML.aria-valuenow = String(percent);
                         //document.getElementById("prog").innerHTML.style = "width: " + percent + "%;";
                         //document.getElementById("prog").innerHTML.innerText = percent + "%";
-                        document.write("bbb");
+                        //document.write("bbb");
                     </script>
                     <p>
                         <script type="text/javascript">
