@@ -74,6 +74,11 @@
                             document.write(percent);
                         </script>
                     </p>
+                    {% if user.is_authenticated %}
+                    <p>{{ user.get_username }}でログイン中</p>
+                    {% else %}
+                    <p>ログインしていません</p>
+                    {% endif %}
 
                     <!--
                     <script type="text/javascript">
