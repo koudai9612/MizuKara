@@ -1,14 +1,6 @@
 {% extends "./_base.html" %}
 {% block content %}
     {% load crispy_forms_tags %}
-    <div id="app-1">{{ message }}</div>  <!-- {{ message }} が Vueデータに置換される -->
-        <script type="text/javascript">
-            var app1 = new Vue({
-                el: '#app-1',                        /* #app-1 要素に対して Vue を適用する */
-                data: { message: 'Hello world!' }    /* message という名前のデータを定義する */
-            })
-        </script>
-
     <div class="container">
         <div id="myModal" class="modal fade" tabindex="-1" role="dialog">
             <div class="modal-dialog" role="document">
@@ -70,7 +62,7 @@
                     </div>
                     <script type="text/javascript">
                         var percent = Math.round((sum/2000)*100);
-                        //document.getElementById("prog").innerHTML.aria-valuenow = percent;
+                        document.getElementById("prog").innerHTML.aria-valuenow = String(percent);
                         //document.getElementById("prog").innerHTML.style = "width: " + percent + "%;";
                         //document.getElementById("prog").innerHTML.innerText = percent + "%";
                         document.write("bbb");
