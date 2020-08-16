@@ -21,19 +21,19 @@ class Item(models.Model):
     type = models.IntegerField(
         verbose_name='飲み物',
         choices=type_choice,
-        blank=True,
+        #blank=True,
         null=True,
     )
 
     amount = models.IntegerField(
         verbose_name='量',
-        blank=True,
+        #blank=True,
         null=True,
     )
 
     date = models.DateField(
         verbose_name='日付',
-        blank=True,
+        #blank=True,
         null=True,
     )
 
