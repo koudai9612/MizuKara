@@ -51,8 +51,11 @@
                     ml 飲みました！</p>
                     <script type="text/javascript">
                                 var percent = Math.round((sum/2000)*100);
-                                $("#pgss").css({'width':percent+'%'});
-
+                                $(function(){
+                                    $(document).on(function(){
+                                        $("#pgss").css({'width':percent+'%'});
+                                    });
+                                })
                     </script>
                     <div class="progress my-3">
                         <div class="progress-bar" id="pgss">
