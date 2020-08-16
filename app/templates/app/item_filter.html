@@ -32,11 +32,12 @@
                             var items = [
                                 {% for item in item_list %}
                                     {% if item.is_today %}
+                                    {% if item.created_by == {{ user.get_username }} %}
                                     {% with index=forloop.counter0 %}
                                         {% if 0 < index %},{% endif %}
                                     {% endwith %}
-
                                     "{{ item.amount }}"
+                                    {% endif %}
                                     {% endif %}
                                 {% endfor %}
                             ];
@@ -75,9 +76,9 @@
                         </script>
                     </p>
                     {% if user.is_authenticated %}
-                    <p>{{ user.get_username }}でログイン中</p>
+                        <p>{{ user.get_username }}でログイン中</p>
                     {% else %}
-                    <p>ログインしていません</p>
+                        <p>ログインしていません</p>
                     {% endif %}
 
                     <!--
