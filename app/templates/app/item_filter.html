@@ -52,10 +52,12 @@
                     <script type="text/javascript">
                                 var percent = Math.round((sum/2000)*100);
                                 var str = "
-                                    <div class=\"progress-bar\" style=\"width: " + percent + "%\" aria-valuenow=\"" + percent + "\" aria-valuemin=\"0\" aria-valuemax=\"100\"> 
+                                    <div class=\"progress-bar\" style=\"width: " + percent + "%\" aria-valuenow=\"" + percent + "\" aria-valuemin=\"0\" aria-valuemax=\"100\">
 
                                     </div>
                                 ";
+
+                                document.write(str);
                                 document.getElementById('prog').innerHTML = str ;
                     </script>
                     <div class="progress my-3" id="prog">
