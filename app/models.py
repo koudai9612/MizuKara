@@ -50,6 +50,10 @@ class Item(models.Model):
         editable=False,
     )
 
+    def created_by_name(self):
+        name = str(self.created_by)
+        return name
+
     # 作成時間
     created_at = models.DateTimeField(
         verbose_name='作成時間',
