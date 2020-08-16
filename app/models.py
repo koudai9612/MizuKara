@@ -35,7 +35,7 @@ class Item(models.Model):
 
     def is_today(self):
         date = self.date.date()
-        return date == date.today()
+        return date == datetime.date.today()
 
     # 以下、管理項目
 
