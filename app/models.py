@@ -33,6 +33,10 @@ class Item(models.Model):
         default=datetime.date.today
     )
 
+    def is_today(self):
+        date = self.date.date()
+        return date == date.today()
+
     # 以下、管理項目
 
     # 作成者(ユーザー)
