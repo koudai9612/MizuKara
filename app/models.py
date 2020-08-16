@@ -81,7 +81,7 @@ class Item(models.Model):
         """
         リストボックスや管理画面での表示
         """
-        return self.type
+        return self.type.choices
 
     class Meta:
         """
