@@ -81,7 +81,7 @@ class Item(models.Model):
         """
         リストボックスや管理画面での表示
         """
-        return self.created_by
+        return str(self.created_by)
 
     class Meta:
         """
