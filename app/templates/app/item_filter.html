@@ -33,9 +33,10 @@
                                 {% for item in item_list %}
                                     {% with index=forloop.counter0 %}
                                         {% if 0 < index%},{% endif %}
-                                        {% if item.is_today %},{% endif %}
                                     {% endwith %}
+                                    {% if item.is_today %}
                                     "{{ item.amount }}"
+                                    {% endif %}
                                 {% endfor %}
                             ];
 
