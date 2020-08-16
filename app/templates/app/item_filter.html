@@ -51,18 +51,21 @@
                     ml 飲みました！</p>
                     <script type="text/javascript">
                                 var percent = Math.round((sum/2000)*100);
-                                $(function(){
-                                    $(document).on(function(){
-                                        $("#pgss").css({'width':'50%'});
-                                    });
-                                })
+                                var str = "
+                                    <div class=\"progress-bar w-" + percent + "\"> 
+
+                                    </div>
+                                ";
+                                document.getElementById('prog').innerHTML = str ;
                     </script>
-                    <div class="progress my-3">
-                        <div class="progress-bar progress-bar-info" id="pgss">
+                    <div class="progress my-3" id="prog">
+                        <!--
+                        <div class="progress-bar">
                             <script type="text/javascript">
                                 document.write(percent + "%");
                             </script>
                         </div>
+                        -->
                     </div>
                     <a class="btn btn-primary" href="{% url 'create' %}"><i class="fas fa-glass-whiskey"></i> 飲んだ！</a>
                 </div>
