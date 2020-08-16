@@ -25,7 +25,7 @@ class Item(models.Model):
 
     amount = models.IntegerField(
         verbose_name='量(ml)',
-        validators=MinValueValidator(1)
+        validators=[MinValueValidator(1)]
     )
 
     date = models.DateField(
