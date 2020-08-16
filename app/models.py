@@ -30,7 +30,7 @@ class Item(models.Model):
 
     date = models.DateField(
         verbose_name='日付',
-        default=datetime.date.today
+        default=datetime.date.today()
     )
 
     def is_today(self):
