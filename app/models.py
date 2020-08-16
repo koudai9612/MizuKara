@@ -23,6 +23,8 @@ class Item(models.Model):
         choices=type_choice,
         #blank=True,
         null=True,
+        validators=[validators.MinValueValidator(0),
+                    validators.MaxValueValidator(100)]
     )
 
     amount = models.IntegerField(
