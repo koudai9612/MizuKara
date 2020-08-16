@@ -49,6 +49,16 @@
                             document.write(sum);
                         </script>
                     ml 飲みました！</p>
+
+                    <div class="progress my-3" id="prog">
+                        <!--
+                        <div class="progress-bar">
+                            <script type="text/javascript">
+                                document.write(percent + "%");
+                            </script>
+                        </div>
+                        -->
+                    </div>
                     <script type="text/javascript">
                                 var percent = Math.round((sum/2000)*100);
                                 var str = "
@@ -60,15 +70,6 @@
                                 document.write(str);
                                 document.getElementById('prog').innerHTML = str ;
                     </script>
-                    <div class="progress my-3" id="prog">
-                        <!--
-                        <div class="progress-bar">
-                            <script type="text/javascript">
-                                document.write(percent + "%");
-                            </script>
-                        </div>
-                        -->
-                    </div>
                     <a class="btn btn-primary" href="{% url 'create' %}"><i class="fas fa-glass-whiskey"></i> 飲んだ！</a>
                 </div>
             </div>
