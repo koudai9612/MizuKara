@@ -1,6 +1,7 @@
 from django.db import models
 from django.core.validators import MaxValueValidator, MinValueValidator
 from users.models import User
+import datetime
 
 class Item(models.Model):
     """
@@ -23,13 +24,13 @@ class Item(models.Model):
     )
 
     amount = models.IntegerField(
-        verbose_name='量',
-        validators=[MinValueValidator(0),
-                    MaxValueValidator(100)]
+        verbose_name='量(ml)',
+        validators=MinValueValidator(1)
     )
 
     date = models.DateField(
         verbose_name='日付',
+        default=datetime.date.today
     )
 
     # 以下、管理項目
