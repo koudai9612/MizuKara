@@ -63,24 +63,12 @@
                     </div>
                     <script type="text/javascript">
                         var percent = Math.round((sum/2000)*100);
+                        document.write("目標を" + percent + "%達成！");
                         //document.getElementById('prog').innerHTML.aria-valuenow = String(percent);
                         //document.getElementById("prog").innerHTML.style = "width: " + percent + "%;";
                         //document.getElementById("prog").innerHTML.innerText = percent + "%";
                         //document.write("bbb");
                     </script>
-                    <p>
-                        <script type="text/javascript">
-                            document.write("aaaaa");
-                            document.write(sum);
-                            document.write(percent);
-                        </script>
-                    </p>
-                    {% if user.is_authenticated %}
-                        <p>{{ user.get_username }}でログイン中</p>
-                    {% else %}
-                        <p>ログインしていません</p>
-                    {% endif %}
-
                     <!--
                     <script type="text/javascript">
                                 var percent = Math.round((sum/2000)*100);
@@ -94,7 +82,6 @@
                                 document.getElementById('prog').innerHTML = str ;
                     </script>
                     -->
-
                     <a class="btn btn-primary" href="{% url 'create' %}"><i class="fas fa-glass-whiskey"></i> 飲んだ！</a>
                 </div>
             </div>
